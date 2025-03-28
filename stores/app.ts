@@ -1,9 +1,9 @@
-import { defineStore } from 'pinia'
-import type { AppConfig } from '~/types'
+import { defineStore } from 'pinia';
+import type { AppConfig } from '~/types';
 
 interface AppState extends AppConfig {
-    isLoading: boolean
-    errors: string[]
+    isLoading: boolean;
+    errors: string[];
 }
 
 export const useAppStore = defineStore('app', {
@@ -18,14 +18,14 @@ export const useAppStore = defineStore('app', {
     },
     actions: {
         toggleTheme() {
-            this.theme = this.isDark ? 'light' : 'dark'
-            localStorage.setItem('theme', this.theme)
+            this.theme = this.isDark ? 'light' : 'dark';
+            localStorage.setItem('theme', this.theme);
         },
         initializeApp() {
-            const savedTheme = localStorage.getItem('theme')
+            const savedTheme = localStorage.getItem('theme');
             if (savedTheme) {
-                this.theme = savedTheme as 'light' | 'dark'
+                this.theme = savedTheme as 'light' | 'dark';
             }
         },
     },
-})
+});

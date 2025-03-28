@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from '@tailwindcss/vite';
+
 export default defineNuxtConfig({
     ssr: false,
     typescript: {
@@ -13,7 +15,14 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@nuxt/test-utils',
         '@pinia/nuxt',
+        '@pinia-plugin-persistedstate/nuxt', // Correct module
     ],
+    css: ['~/assets/css/main.scss'],
+    vite: {
+        plugins: [
+            tailwindcss(),
+        ],
+    },
     runtimeConfig: {
         public: {
             apiBase: process.env.NUXT_PUBLIC_API_BASE,
@@ -22,10 +31,13 @@ export default defineNuxtConfig({
     },
     app: {
         head: {
-            title: 'Nuxt Starter',
+            title: 'App Starter',
             meta: [
                 { charset: 'utf-8' },
-                { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+                {
+                    name: 'viewport',
+                    content: 'width=device-width, initial-scale=1',
+                },
             ],
         },
     },

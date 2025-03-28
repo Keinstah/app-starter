@@ -1,5 +1,5 @@
 {
-    "name": "nuxt-app",
+    "name": "app-starter",
     "private": true,
     "type": "module",
     "scripts": {
@@ -18,27 +18,32 @@
         "@nuxt/icon": "1.11.0",
         "@nuxt/image": "1.10.0",
         "@pinia/nuxt": "^0.10.1",
+        "@tanstack/vue-query": "^5.17.0",
+        "@tanstack/vue-query-devtools": "^5.17.0",
         "@vueuse/core": "^10.0.0",
         "@vueuse/nuxt": "^10.0.0",
         "eslint": "^9.0.0",
         "nuxt": "^3.16.1",
         "pinia": "^3.0.1",
+        "pinia-plugin-persistedstate": "^4.2.0",
         "vue": "^3.5.13",
         "vue-router": "^4.5.0",
         "zod": "^3.0.0"
     },
     "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf",
     "devDependencies": {
+        "@nuxt/test-utils": "^3.17.2",
+        "@tailwindcss/vite": "^4.0.17",
+        "@vue/test-utils": "^2.4.6",
+        "cypress": "^13.0.0",
         "eslint-config-prettier": "^10.1.1",
         "eslint-plugin-prettier": "^5.2.5",
+        "happy-dom": "^17.4.4",
+        "playwright-core": "^1.51.1",
         "prettier": "3.5.3",
-        "vue-tsc": "^2.2.8",
-        "@nuxt/test-utils": "^3.0.0",
-        "vitest": "^0.34.0",
-        "@vue/test-utils": "^2.0.0",
-        "cypress": "^13.0.0",
-        "tailwindcss": "^3.0.0",
-        "postcss": "^8.0.0",
-        "autoprefixer": "^10.0.0"
+        "sass": "^1.72.0",
+        "tailwindcss": "^4.0.0",
+        "vitest": "^0.34.6",
+        "vue-tsc": "^2.2.8"
     }
 }
